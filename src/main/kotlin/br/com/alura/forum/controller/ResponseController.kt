@@ -22,10 +22,10 @@ class ResponseController(private val service: ResponseService) {
         return service.getOne(id)
     }
 
-    @PostMapping
+    /*@PostMapping
     fun create(@RequestBody @Valid dto: ResponseForm) {
         service.generate(dto)
-    }
+    }*/
 
     @PostMapping
     fun create(@RequestBody @Valid dto: ResponseForm, uirComponent: UriComponentsBuilder): ResponseEntity<ResponseView> {

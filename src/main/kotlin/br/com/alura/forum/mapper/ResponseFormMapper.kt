@@ -14,7 +14,8 @@ class ResponseFormMapper(
     override fun map(t: ResponseForm): Response {
         return Response(
             message = t.message,
-            author = userService.getAuthorById(t.authorId)
+            author = userService.getAuthorById(t.authorId),
+            topic = null
         )
     }
 

@@ -1,26 +1,15 @@
 package br.com.alura.forum.service
 
 import br.com.alura.forum.model.Course
+import br.com.alura.forum.repository.CurseRepository
 import org.springframework.stereotype.Service
 import java.util.*
 
 @Service
-class CurseService(var curses: List<Course>) {
-
-    init {
-        val curse = Course (
-            id = 1,
-            name = "Kotlin",
-            category = "Programming"
-        )
-
-       curses = Arrays.asList(curse)
-    }
+class CurseService(private val repository: CurseRepository) {
 
     fun getCurseById(id: Long): Course {
-        return curses.stream().filter {
-            c -> c.id == id
-        }.findFirst().get()
+        return repository.getReferenceById(id)
     }
 
 }
