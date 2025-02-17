@@ -58,7 +58,10 @@ class TopicService(
         }
     }
 
-    fun relatory(): List<TopicByCategoryView>{
-        return repository.relatory()
+    fun relatory(): List<TopicByCategoryView>?{
+        // return repository.relatory()
+        return null
     }
+
+
 }

@@ -37,7 +37,7 @@ class TopicController(private val service: TopicService) {
     }
 
     @GetMapping("/relatory")
-    fun getRelatory(): List<TopicByCategoryView> {
+    fun getRelatory(): List<TopicByCategoryView>? {
         return service.relatory()
     }
 

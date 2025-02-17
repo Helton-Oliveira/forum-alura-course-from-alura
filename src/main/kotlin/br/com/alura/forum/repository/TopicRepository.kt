@@ -11,7 +11,7 @@ interface TopicRepository : JpaRepository<Topic, Long> {
 
     fun findByCourseName(nameCurse: String, pagination: Pageable): Page<Topic>
 
-    @Query("SELECT new br.com.alura.forum.dto.TopicByCategory(course.category, count(t)) FROM Topic t JOIN t.course course GROUP BY course.category")
-    fun relatory(): List<TopicByCategoryView>
+   /* @Query("SELECT new br.com.alura.forum.dto.TopicByCategory(course.category, count(t)) FROM Topic t JOIN t.course course GROUP BY course.category")
+    fun relatory(): List<TopicByCategoryView>*/
 
 }
