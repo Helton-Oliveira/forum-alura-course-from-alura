@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="292cf41e-5c7c-430e-838e-2b5073543232" name="Changes" comment="feat: applying docker with database, profiles (dev, prod), sending emails with javamail and generating reports with thimeleaf">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/CI.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/forum/controller/RelatoryController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/forum/controller/RelatoryController.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Helton-Oliveira&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Helton-Oliveira/forum-alura-course-from-alura.git&quot;,
+    &quot;accountId&quot;: &quot;953e4fb8-9abe-4be2-a6db-bab70b171094&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2szinEFfmRneUzlsMbM8vbuUnAx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.TopicControllerTest.Deve retornar um codigo 400 quando chamar topics sem autenticacao.executor": "Run",
+    "JUnit.TopicControllerTest.deve retornar codigo 200 quando chamar topico por id com token.executor": "Run",
+    "JUnit.TopicControllerTest.deve retornar codigo 200 quando chamar topics com token.executor": "Run",
+    "JUnit.TopicRepositoryTest.Deve lista topico por nome do curso.executor": "Run",
+    "Kotlin.ForumApplicationKt.executor": "Run",
+    "Maven.forum [clean,package].executor": "Run",
+    "Maven.forum [clear].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/helto/Downloads/forum/forum",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\helto\Downloads\forum\forum\src\main\resources\db\migration" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="br.com.alura.forum.security" />
+      <recent name="br.com.alura.forum.DTOs" />
+      <recent name="br.com.alura.forum.service" />
+      <recent name="br.com.alura.forum.mapper" />
+      <recent name="br.com.alura.forum.model" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="br.com.alura.forum.mapper" />
+      <recent name="br.com.alura.forum.controller" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clear" />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.ForumApplicationKt">
+    <configuration name="TopicControllerTest.Deve retornar um codigo 400 quando chamar topics sem autenticacao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.forum.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.alura.forum.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.forum.controller.TopicControllerTest" />
+      <option name="METHOD_NAME" value="Deve retornar um codigo 400 quando chamar topics sem autenticacao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicControllerTest.deve retornar codigo 200 quando chamar topico por id com token" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.forum.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.alura.forum.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.forum.controller.TopicControllerTest" />
+      <option name="METHOD_NAME" value="deve retornar codigo 200 quando chamar topico por id com token" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicControllerTest.deve retornar codigo 200 quando chamar topics com token" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.forum.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.alura.forum.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.forum.controller.TopicControllerTest" />
+      <option name="METHOD_NAME" value="deve retornar codigo 200 quando chamar topics com token" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicRepositoryTest.Deve lista topico por nome do curso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="forum" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.forum.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.alura.forum.integration" />
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.forum.integration.TopicRepositoryTest" />
+      <option name="METHOD_NAME" value="Deve lista topico por nome do curso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForumApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.forum.ForumApplicationKt" />
+      <module name="forum" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.ForumApplicationKt" />
+        <item itemvalue="JUnit.TopicControllerTest.deve retornar codigo 200 quando chamar topico por id com token" />
+        <item itemvalue="JUnit.TopicControllerTest.deve retornar codigo 200 quando chamar topics com token" />
+        <item itemvalue="JUnit.TopicControllerTest.Deve retornar um codigo 400 quando chamar topics sem autenticacao" />
+        <item itemvalue="JUnit.TopicRepositoryTest.Deve lista topico por nome do curso" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="292cf41e-5c7c-430e-838e-2b5073543232" name="Changes" comment="" />
+      <created>1739464968698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739464968698</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: working with spring-boot and create Rest API in Kotlin language and treatment and manipulation error">
+      <option name="closed" value="true" />
+      <created>1739479938291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739479938291</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: working with spring-boot and implement data manipulation with JPA and hibernate in project API Rest">
+      <option name="closed" value="true" />
+      <created>1739575243161</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739575243163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: applying spring-security and JWT for authentication and authorization. Applying docker container and multiples profiles to build the project&#10;     and deploy in environment od prodution">
+      <option name="closed" value="true" />
+      <created>1739836056504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739836056506</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: applying docker with database, profiles (dev, prod), sending emails with javamail and generating reports with thimeleaf">
+      <option name="closed" value="true" />
+      <created>1739991347940</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739991347940</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: working with spring-boot and create Rest API in Kotlin language and treatment and manipulation error" />
+    <MESSAGE value="feat: working with spring-boot and implement data manipulation with JPA and hibernate in project API Rest" />
+    <MESSAGE value="feat: applying spring-security and JWT for authentication and authorization. Applying docker container and multiples profiles to build the project&#10;     and deploy in environment od prodution" />
+    <MESSAGE value="feat: applying docker with database, profiles (dev, prod), sending emails with javamail and generating reports with thimeleaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: applying docker with database, profiles (dev, prod), sending emails with javamail and generating reports with thimeleaf" />
+  </component>
+</project>

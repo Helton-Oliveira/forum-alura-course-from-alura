@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/forum
+    username: root
+    password: root
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+  mail:
+    host: sandbox.smtp.mailtrap.io
+    port: 2525
+    username: 176c8918b1efd6
+    password: "********7b56"
+    properties:
+      mail:
+        transport:
+          protocol: smpt
+        debug: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: secreto

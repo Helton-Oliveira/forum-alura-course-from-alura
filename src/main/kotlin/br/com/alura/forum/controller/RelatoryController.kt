@@ -1,6 +1,5 @@
 package br.com.alura.forum.controller
 
-import br.com.alura.forum.DTOs.TopicByCategoryView
 import br.com.alura.forum.service.TopicService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
