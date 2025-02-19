@@ -1,6 +1,6 @@
 package br.com.alura.forum.security
 
-import br.com.alura.forum.config.JWTUtil
+import br.com.alura.forum.config.JwtUtil
 import br.com.alura.forum.model.Credentials
 import br.com.alura.forum.service.UserDetail
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -14,7 +14,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 class JWTLoginFilter(
     private val authManager: AuthenticationManager,
-    private val jwtUtil: JWTUtil)
+    private val jwtUtil: JwtUtil
+)
     : UsernamePasswordAuthenticationFilter() {
 
     override fun attemptAuthentication(request: HttpServletRequest?, response: HttpServletResponse?): Authentication {

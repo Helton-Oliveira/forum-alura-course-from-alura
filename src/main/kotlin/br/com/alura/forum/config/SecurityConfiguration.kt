@@ -19,26 +19,31 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-class SecurityConfiguration(private val userDetailsService: UserDetailsService, private val jwtUtil: JWTUtil, private val authConfig: AuthenticationConfiguration) {
+class SecurityConfiguration(private val userDetailsService: UserDetailsService, private val jwtUtil: JwtUtil, private val authConfig: AuthenticationConfiguration) {
 
     @Bean
-    fun securityFilterChain(http: HttpSecurity?): SecurityFilterChain? {
+    fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http
-            ?.csrf{csrf -> csrf.disable()}
-            ?.authorizeHttpRequests { authz ->
-                authz.requestMatchers("/topics").hasAuthority("LEITURA_ESCRITA")
-                    ?.requestMatchers(HttpMethod.POST,"/login")?.permitAll()
-                    ?.anyRequest()
-                    ?.authenticated()
+            .csrf { it.disable() }
+            .authorizeHttpRequests { authz ->
+                authz
+                    .requestMatchers("/topics").hasAuthority("LEITURA_ESCRITA")
+                    .requestMatchers("/response").hasAuthority("LEITURA_ESCRITA")
+                    .requestMatchers("/relatories").hasAuthority("ADMIN")
+                    .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                    .requestMatchers(HttpMethod.GET, "/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                    .anyRequest().authenticated()
             }
-            http?.addFilterBefore(JWTLoginFilter(authManager = authenticationManager(), jwtUtil = jwtUtil), UsernamePasswordAuthenticationFilter().javaClass)
-                ?.addFilterBefore(JWTAuthenticationFilter(jwtUtil = jwtUtil), UsernamePasswordAuthenticationFilter::class.java)
-            ?.sessionManagement { session ->
+            .sessionManagement { session ->
                 session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             }
-            ?.httpBasic{}
+            .httpBasic {}
 
-        return http?.build()
+        // Adicionando filtros na ordem correta
+        http.addFilterBefore(JWTLoginFilter(authenticationManager(), jwtUtil), UsernamePasswordAuthenticationFilter::class.java)
+        http.addFilterBefore(JWTAuthenticationFilter(jwtUtil), UsernamePasswordAuthenticationFilter::class.java)
+
+        return http.build()
     }
 
     @Bean

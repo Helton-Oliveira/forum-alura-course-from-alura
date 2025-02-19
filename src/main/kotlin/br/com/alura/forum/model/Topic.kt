@@ -1,6 +1,7 @@
 package br.com.alura.forum.model
 
 import jakarta.persistence.*
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Entity
@@ -29,15 +30,17 @@ data class Topic (
 
     @ManyToOne
     @JoinColumn(name = "author_id") // Nome da coluna FK
-    val author: User
+    val author: User,
+
+    var dateChange: LocalDate? = null
 ) {
     fun updateData(newTitle: String?, newMessage: String?) {
         if (!newTitle.isNullOrBlank()) {
             this.title = newTitle
         }
-
         if (!newMessage.isNullOrBlank()) {
             this.message = newMessage
         }
+        dateChange = LocalDate.now()
     }
 }

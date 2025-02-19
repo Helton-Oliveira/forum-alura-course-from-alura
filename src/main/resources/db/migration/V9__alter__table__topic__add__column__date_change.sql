@@ -1,0 +1,1 @@
+alter table topics add column date_change date;

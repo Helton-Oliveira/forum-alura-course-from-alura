@@ -5,6 +5,7 @@ import br.com.alura.forum.DTOs.TopicForm
 import br.com.alura.forum.DTOs.TopicView
 import br.com.alura.forum.DTOs.UpdateTopicForm
 import br.com.alura.forum.service.TopicService
+import io.swagger.v3.oas.annotations.security.SecurityRequirement
 import jakarta.transaction.Transactional
 import jakarta.validation.Valid
 import org.springframework.cache.annotation.CacheEvict
@@ -19,11 +20,11 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.util.UriComponentsBuilder
 
 @RestController
+@SecurityRequirement(name = "bearerAuth")
 @RequestMapping("/topics")
 class TopicController(private val service: TopicService) {
 
     @GetMapping
-    @Cacheable("topics")
     fun list(
         @RequestParam(required = false) nameCurse: String?,
         @PageableDefault(size = 5, sort = ["createdDate"], direction = Sort.Direction.DESC) pagination: Pageable // paginacao de dados GET da api
@@ -43,7 +44,6 @@ class TopicController(private val service: TopicService) {
 
     @PostMapping
     @Transactional
-    @CacheEvict(value = ["topics"], allEntries = true)
     fun create(@RequestBody @Valid dto: TopicForm, uirComponent: UriComponentsBuilder): ResponseEntity<TopicView> {
        val view = service.generate(dto)
         val uri = uirComponent.path("/topcs/${view.id}").build().toUri()
@@ -52,14 +52,12 @@ class TopicController(private val service: TopicService) {
 
     @PutMapping
     @Transactional
-    @CacheEvict(value = ["topics"], allEntries = true)
     fun update(@RequestBody @Valid dto: UpdateTopicForm): ResponseEntity<TopicView> {
         val topic = service.updateTopic(dto)
         return ResponseEntity.ok().body(topic)
     }
 
     @DeleteMapping("/{id}")
-    @CacheEvict(value = ["topics"], allEntries = true)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun delete(@PathVariable id: Long) {
         service.deleteTopic(id)
