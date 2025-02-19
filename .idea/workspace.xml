@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="292cf41e-5c7c-430e-838e-2b5073543232" name="Changes" comment="feat: applying docker with database, profiles (dev, prod), sending emails with javamail and generating reports with thimeleaf">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/CI.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/forum/controller/RelatoryController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/forum/controller/RelatoryController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/CD.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
